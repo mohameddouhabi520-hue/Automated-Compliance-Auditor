@@ -45,3 +45,9 @@ Compliance Score        : 50.00%
     Issue:  Storage bucket 'customer-data-backup-legacy' is unencrypted.
     Fix:    Ensure storage buckets are encrypted at rest
 ==============================================
+👨‍💻 About the Author
+Mohamed Douhabi
+
+Cybersecurity Engineer | Specializing in Compliance, Cloud Security & SecOps
+
+Created to demonstrate how to automate routine GRC (Governance, Risk, and Compliance) tasks and shift security checks "left" into the DevOps pipeline.
