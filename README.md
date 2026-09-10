@@ -22,3 +22,26 @@ Instead of manually reviewing configurations in spreadsheets, this Python engine
    
 ```bash
    python compliance_auditor.py
+🔍 Expected Output
+The script generates a clean, SOC-ready audit report in the terminal:
+
+--- Starting Automated Compliance Audit for: cloud_config.json ---
+
+================ AUDIT REPORT ================
+Total Resources Scanned : 6
+Security Violations     : 3
+Compliance Score        : 50.00%
+
+--- CRITICAL & HIGH FINDINGS ---
+[CRITICAL] IAM-001 (CIS / PCI DSS 8.3)
+    Issue:  User 'service_account_dev' does not have MFA enabled.
+    Fix:    Ensure MFA is enabled for all IAM users
+
+[CRITICAL] NET-001 (CIS / PCI DSS 1.2.1)
+    Issue:  Security Group 'web-tier-sg' allows unrestricted SSH access.
+    Fix:    Ensure SSH is not open to the world
+
+[HIGH] STO-001 (PCI DSS 3.4)
+    Issue:  Storage bucket 'customer-data-backup-legacy' is unencrypted.
+    Fix:    Ensure storage buckets are encrypted at rest
+==============================================
