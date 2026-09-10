@@ -1,0 +1,37 @@
+{
+    "iam_users": [
+        {
+            "username": "admin_douhabi",
+            "mfa_active": true
+        },
+        {
+            "username": "service_account_dev",
+            "mfa_active": false
+        }
+    ],
+    "security_groups": [
+        {
+            "group_name": "web-tier-sg",
+            "ingress_rules": [
+                {"port": 443, "cidr": "0.0.0.0/0"},
+                {"port": 22, "cidr": "0.0.0.0/0"}
+            ]
+        },
+        {
+            "group_name": "database-tier-sg",
+            "ingress_rules": [
+                {"port": 5432, "cidr": "10.0.0.0/16"}
+            ]
+        }
+    ],
+    "storage_buckets": [
+        {
+            "bucket_name": "revolut-ops-logs-prod",
+            "encryption_enabled": true
+        },
+        {
+            "bucket_name": "customer-data-backup-legacy",
+            "encryption_enabled": false
+        }
+    ]
+}
